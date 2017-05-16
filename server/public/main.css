@@ -1,8 +1,11 @@
-.main {
+.container {
   display: flex;
-  flex-direction: row;
 }
 
-.main div {
-  margin: 0px 10px 0px 10px;
+.nav {
+  margin-right: 30px;
+}
+
+.content {
+  flex: 3;
 }
