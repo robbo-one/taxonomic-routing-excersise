@@ -1,8 +1,8 @@
-export const capitalize = (word) => {
+export function capitalize (word) {
   return word[0].toUpperCase() + word.split('').slice(1).join('')
 }
 
-export const singularOf = (classification) => {
+export function singularOf (classification) {
   switch (classification) {
     case 'kingdoms':
       return 'kingdom'

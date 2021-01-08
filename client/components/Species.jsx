@@ -1,9 +1,9 @@
 import React from 'react'
-import {Link} from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 import species from '../../data/species'
 
-const Species = ({match}) => {
+function Species ({ match }) {
   const id = Number(match.params.id)
   const details = species.filter(item => item.id === id)[0]
 

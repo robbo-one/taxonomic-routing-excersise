@@ -1,11 +1,11 @@
 import React from 'react'
-import {Link} from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 import species from '../../data/species'
-import {singularOf} from '../utilities'
+import { singularOf } from '../utilities'
 
-const SpeciesListing = ({match}) => {
-  const {rank, name} = match.params
+function SpeciesListing ({ match }) {
+  const { rank, name } = match.params
   const matches = species.filter(item => {
     return item[singularOf(rank)] === name
   })

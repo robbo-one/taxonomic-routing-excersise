@@ -1,11 +1,11 @@
 import React from 'react'
-import {Link} from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
-import {capitalize} from '../utilities'
+import { capitalize } from '../utilities'
 import ranks from '../../data/ranks'
 
-const RankListing = ({match}) => {
-  const {rank} = match.params
+function RankListing ({ match }) {
+  const { rank } = match.params
   const list = ranks[rank]
 
   return (
