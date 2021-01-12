@@ -13,7 +13,7 @@ function Nav ({ ranks, location }) {
         {rankList.map((rankName, key) => {
           const normal = <li key={key}><Link to={`/list/${rankName}`}>{capitalize(rankName)}</Link></li>
           const selected = <li key={key}><strong><Link to={`/list/${rankName}`}>{capitalize(rankName)}</Link></strong></li>
-          return location.pathname.indexOf(rankName) > 0 ? selected : normal
+          return location.pathname.includes(rankName) ? selected : normal
         })}
       </ul>
     </div>
