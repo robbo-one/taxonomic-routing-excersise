@@ -2,9 +2,9 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 
 import { capitalize } from '../utilities'
-import ranks from '../../data/ranks'
+import withRanks from '../withRanks'
 
-function RankListing ({ match }) {
+function RankListing ({ ranks, match }) {
   const { rank } = match.params
   const list = ranks[rank]
 
@@ -22,4 +22,4 @@ function RankListing ({ match }) {
   )
 }
 
-export default RankListing
+export default withRanks(RankListing)

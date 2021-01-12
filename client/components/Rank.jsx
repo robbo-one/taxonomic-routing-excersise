@@ -3,9 +3,9 @@ import { Route, Link } from 'react-router-dom'
 
 import SpeciesListing from './SpeciesListing'
 
-import ranks from '../../data/ranks'
+import withRanks from '../withRanks'
 
-function Rank ({ match }) {
+function Rank ({ ranks, match }) {
   const { rank, name } = match.params
   const classification = ranks[rank].filter(item => item.name === name)[0]
 
@@ -19,4 +19,4 @@ function Rank ({ match }) {
   )
 }
 
-export default Rank
+export default withRanks(Rank)

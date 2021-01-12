@@ -2,11 +2,10 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 
 import { capitalize } from '../utilities'
-import ranks from '../../data/ranks'
+import withRanks from '../withRanks'
 
-const rankList = Object.keys(ranks)
-
-function Nav ({ location }) {
+function Nav ({ ranks, location }) {
+  const rankList = Object.keys(ranks)
   return (
     <div className='nav'>
       <h2>Nav</h2>
@@ -21,4 +20,4 @@ function Nav ({ location }) {
   )
 }
 
-export default Nav
+export default withRanks(Nav)

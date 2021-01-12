@@ -1,10 +1,10 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-import species from '../../data/species'
 import { singularOf } from '../utilities'
+import withSpecies from '../withSpecies'
 
-function SpeciesListing ({ match }) {
+function SpeciesListing ({ species, match }) {
   const { rank, name } = match.params
   const matches = species.filter(item => {
     return item[singularOf(rank)] === name
@@ -22,4 +22,4 @@ function SpeciesListing ({ match }) {
   )
 }
 
-export default SpeciesListing
+export default withSpecies(SpeciesListing)

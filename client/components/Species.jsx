@@ -1,9 +1,9 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-import species from '../../data/species'
+import withSpecies from '../withSpecies'
 
-function Species ({ match }) {
+function Species ({ species, match }) {
   const id = Number(match.params.id)
   const details = species.filter(item => item.id === id)[0]
 
@@ -26,4 +26,4 @@ function Species ({ match }) {
   )
 }
 
-export default Species
+export default withSpecies(Species)
