@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 import { capitalize } from '../utilities'
 import withRanks from '../withRanks'
 
-function Nav ({ ranks, location }) {
+export function Nav ({ ranks, location }) {
   const rankList = Object.keys(ranks)
   return (
     <div className='nav'>

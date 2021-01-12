@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 import { capitalize } from '../utilities'
 import withRanks from '../withRanks'
 
-function RankListing ({ ranks, match }) {
+export function RankListing ({ ranks, match }) {
   const { rank } = match.params
   const list = ranks[rank]
 

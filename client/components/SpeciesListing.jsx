@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 import { singularOf } from '../utilities'
 import withSpecies from '../withSpecies'
 
-function SpeciesListing ({ species, match }) {
+export function SpeciesListing ({ species, match }) {
   const { rank, name } = match.params
   const matches = species.filter(item => {
     return item[singularOf(rank)] === name
