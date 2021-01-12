@@ -11,9 +11,14 @@ export function Nav ({ ranks, location }) {
       <h2>Nav</h2>
       <ul>
         {rankList.map((rankName, key) => {
-          const normal = <li key={key}><Link to={`/list/${rankName}`}>{capitalize(rankName)}</Link></li>
-          const selected = <li key={key}><strong><Link to={`/list/${rankName}`}>{capitalize(rankName)}</Link></strong></li>
-          return location.pathname.includes(rankName) ? selected : normal
+          return <li key={key}>
+            <Link
+              to={`/list/${rankName}`}
+              className={location.pathname.includes(rankName) ? 'selected' : null}
+            >
+              {capitalize(rankName)}
+            </Link>
+          </li>
         })}
       </ul>
     </div>
