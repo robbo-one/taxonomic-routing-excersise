@@ -12,9 +12,9 @@ export function RankListing ({ ranks, match }) {
     <div className='rank-listing'>
       <h2>{capitalize(rank)}</h2>
       <ul>
-        {list.map((item, key) => {
+        {list.map((classification, key) => {
           return (
-            <li key={key}><Link to={`/rank/${rank}/${item.name}`}>{item.name}</Link></li>
+            <li key={key}><Link to={`/rank/${rank}/${classification.name}`}>{classification.name}</Link></li>
           )
         })}
       </ul>
