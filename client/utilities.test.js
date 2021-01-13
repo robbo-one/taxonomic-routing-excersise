@@ -32,8 +32,8 @@ describe('singularOf', () => {
     const singular = singularOf('genera')
     expect(singular).toBe('genus')
   })
-  it('returns undefined if classification doesn\'t exist', () => {
+  it('returns original input if classification not found', () => {
     const singular = singularOf('randomclassification')
-    expect(singular).toBeUndefined()
+    expect(singular).toBe('randomclassification')
   })
 })

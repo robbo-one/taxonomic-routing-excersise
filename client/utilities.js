@@ -16,5 +16,7 @@ export function singularOf (classification) {
       return 'family'
     case 'genera':
       return 'genus'
+    default:
+      return classification
   }
 }
