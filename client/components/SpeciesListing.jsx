@@ -6,16 +6,16 @@ import withSpecies from '../withSpecies'
 
 export function SpeciesListing ({ species, match }) {
   const { rank, name } = match.params
-  const matches = species.filter(item => {
-    return item[singularOf(rank)] === name
+  const matches = species.filter((type) => {
+    return type[singularOf(rank)] === name
   })
 
   return (
     <div className='species-listing'>
       <h2>Species</h2>
       <ul>
-        {matches.map((item, key) => {
-          return <li key={key}><Link to={`/species/${item.id}`}>{item.name}</Link></li>
+        {matches.map((species, key) => {
+          return <li key={key}><Link to={`/species/${species.id}`}>{species.name}</Link></li>
         })}
       </ul>
     </div>
