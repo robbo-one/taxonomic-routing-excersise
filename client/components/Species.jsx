@@ -1,11 +1,12 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
+import { findById } from '../utilities'
 import withSpecies from '../withSpecies'
 
 function Species ({ species, match }) {
   const id = Number(match.params.id)
-  const details = species.filter(item => item.id === id)[0]
+  const details = findById(species, id)
 
   return (
     <div className='species'>

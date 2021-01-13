@@ -20,3 +20,11 @@ export function singularOf (classification) {
       return classification
   }
 }
+
+export function findById (arr, id) {
+  return arr.find((item) => item.id === id)
+}
+
+export function findByName (arr, name) {
+  return arr.find((item) => item.name === name)
+}

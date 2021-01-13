@@ -1,4 +1,4 @@
-import { capitalize, singularOf } from './utilities'
+import { capitalize, singularOf, findById, findByName } from './utilities'
 
 describe('capitalize', () => {
   it('capitalises a word', () => {
@@ -35,5 +35,49 @@ describe('singularOf', () => {
   it('returns original input if classification not found', () => {
     const singular = singularOf('randomclassification')
     expect(singular).toBe('randomclassification')
+  })
+})
+
+describe('findById', () => {
+  const species = [{
+    id: 1,
+    name: 'test species 1'
+  }, {
+    id: 2,
+    name: 'test species 2'
+  }, {
+    id: 3,
+    name: 'test species 3'
+  }]
+
+  it('returns item with matching id', () => {
+    const foundSpecies = findById(species, 2)
+    expect(foundSpecies).toBe(species[1])
+  })
+  it('returns undefined if no match found', () => {
+    const foundSpecies = findById(species, 4)
+    expect(foundSpecies).toBeUndefined()
+  })
+})
+
+describe('findByName', () => {
+  const species = [{
+    id: 1,
+    name: 'test species 1'
+  }, {
+    id: 2,
+    name: 'test species 2'
+  }, {
+    id: 3,
+    name: 'test species 3'
+  }]
+
+  it('returns item with matching name', () => {
+    const foundSpecies = findByName(species, 'test species 3')
+    expect(foundSpecies).toBe(species[2])
+  })
+  it('returns undefined if no match found', () => {
+    const foundSpecies = findByName(species, 4)
+    expect(foundSpecies).toBeUndefined()
   })
 })

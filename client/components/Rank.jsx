@@ -3,11 +3,12 @@ import { Route, Link } from 'react-router-dom'
 
 import SpeciesListing from './SpeciesListing'
 
+import { findByName } from '../utilities'
 import withRanks from '../withRanks'
 
 function Rank ({ ranks, match }) {
   const { rank, name } = match.params
-  const classification = ranks[rank].filter(item => item.name === name)[0]
+  const classification = findByName(ranks[rank], name)
 
   return (
     <div className='rank-listing'>
