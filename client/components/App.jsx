@@ -10,6 +10,7 @@ function App () {
       {/* This 'main' div is only for styling (so we can use flexbox) */}
       <div className='main'>
         <Nav />
+        
         <Home />
       </div>
     </>
