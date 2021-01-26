@@ -12,7 +12,7 @@ function Nav () {
       <ul>
       {rankNames.map(rank => {
         return (
-          <li>
+          <li key={rankNames.find(rankName => rankName == rank)}>
             <Link to={`/list/${rank}`}>{rank}</Link>
           </li>
         )
