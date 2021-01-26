@@ -1,5 +1,6 @@
 import React from 'react'
 import ranks from '../../data/ranks'
+import { Link } from 'react-router-dom'
 
 function Classification (props) {
   const rank = props.match.params.rank
@@ -15,7 +16,7 @@ function Classification (props) {
       <p>
         {findClass.description}
       </p>
-      {/* {console.log(notSure)} */}
+      <Link to={`${props.match.url}/species`}>Show species</Link>
     </div>
   )
 }
