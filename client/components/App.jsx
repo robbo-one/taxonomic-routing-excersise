@@ -5,6 +5,7 @@ import Nav from './Nav'
 import Home from './Home'
 import Classifications from './Classifications'
 import Description from './Description'
+import SpeciesListing from './SpeciesListing'
 
 function App () {
   return (
@@ -16,7 +17,7 @@ function App () {
         <Route path="/" exact component={Home} />
         <Route path="/rank/:rank" component={Classifications} />
         <Route path="/rank/:rank/:name" component={Description} />
-
+        <Route path="/rank/:rank/:name/species" component={SpeciesListing} />
       </div>
     </>
   )

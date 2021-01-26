@@ -10,15 +10,14 @@ const Description = (props) => {
 
 let thing = ranks[classification].find(val => val.name == name)
 
-  console.log(thing.description)
-
   return (
     <div>
       <h2>{thing.name}</h2>
       <ul>
       {thing.description}
       </ul>
-      
+      <Link to={`${props.match.url}/species`}>Show species</Link>
+
     </div>
   )
 }
