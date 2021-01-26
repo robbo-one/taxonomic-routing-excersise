@@ -1,5 +1,7 @@
 import React from 'react'
+import { Route } from 'react-router-dom'
 
+// import these JSX files
 import Nav from './Nav'
 import Home from './Home'
 
@@ -10,7 +12,7 @@ function App () {
       {/* This 'main' div is only for styling (so we can use flexbox) */}
       <div className='main'>
         <Nav />
-        <Home />
+        <Route path="/" exact component={Home} />
       </div>
     </>
   )
