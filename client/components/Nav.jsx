@@ -1,14 +1,26 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
+import ranksData from "../../data/ranks.js"
 
-function Nav () {
-  return (
-    <div>
-      <h2>Nav</h2>
-      <ul>
-        <li>Build your ranks list here</li>
-      </ul>
-    </div>
-  )
-}
+function Nav (props) {  
+  console.log(Object.keys(ranksData))  
+    return (
+      <nav>
+        <h2>Nav</h2>
+        <ul>
+            <Link to="/">
+              {Object.keys(ranksData).map(rank => {
+                return (
+                  <li>
+                    {rank}
+                  </li>
+                )
+              })}
+            </Link>
+        </ul>
+      </nav>
+    );
+   
+};
 
 export default Nav
