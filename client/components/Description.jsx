@@ -14,7 +14,7 @@ let thing = ranks[classification].find(val => val.name == name)
 
   return (
     <div>
-      <h2>Descriptions</h2>
+      <h2>{thing.name}</h2>
       <ul>
       {thing.description}
       </ul>
