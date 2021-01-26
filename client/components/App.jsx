@@ -1,7 +1,8 @@
 import React from 'react'
-
 import Nav from './Nav'
 import Home from './Home'
+import Classifications from './Classifications'
+import { Route } from 'react-router-dom'
 
 function App () {
   return (
@@ -9,8 +10,11 @@ function App () {
       <h1>Navigating the taxonomic routes</h1>
       {/* This 'main' div is only for styling (so we can use flexbox) */}
       <div className='main'>
-        <Nav />
-        <Home />
+          <Nav/>
+          <Route path="/:rank" exact component={Classifications} />
+          {/* <Route path="" exact component={Classifications} /> */}
+        {/* <Home /> */}
+        <Route path="/" exact component={Home} />
       </div>
     </>
   )
