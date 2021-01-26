@@ -20,7 +20,7 @@ function Classifications(props) {
           return (
 
           <li key={cl.id}>
-              <Link to='#'> {cl.name} </Link>
+              <Link to={`/rank/${rank}/${cl.name}`}>{cl.name}</Link>
           </li>
           )
         })}
