@@ -6,11 +6,6 @@ const Classifications = (props) => {
 
   let rankList = Object.keys(ranks)
   const classification = props.match.params.rank
-  console.log(ranks[classification].map(val => val.name))
-
-  console.log("params", classification)
-
-
   return (
     <div>
       <h2>Classifications</h2>
