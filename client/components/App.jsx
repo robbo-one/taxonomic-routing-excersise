@@ -2,6 +2,7 @@ import React from 'react'
 import Nav from './Nav'
 import Home from './Home'
 import Classifications from './Classifications'
+import Individual from './Individual'
 import { Route } from 'react-router-dom'
 
 function App () {
@@ -12,6 +13,7 @@ function App () {
       <div className='main'>
           <Nav/>
           <Route path="/:rank" exact component={Classifications} />
+          <Route path="/:rank/:id" exact component={Individual} />
           {/* <Route path="" exact component={Classifications} /> */}
         {/* <Home /> */}
         <Route path="/" exact component={Home} />

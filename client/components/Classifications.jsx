@@ -16,6 +16,7 @@ const Classifications = (props) => {
         {(classifications).map((classification) => {
           // console.log(classification.name)
           return (
+            // <Individual/>
             <li key={classification.id}>
               <Link to={`/${rank}/${classification.id}`}>{classification.name}</Link>
             </li>
