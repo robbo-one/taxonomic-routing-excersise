@@ -1,20 +1,20 @@
 import React from 'react'
-import { HashRouter as Router, Route } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 import ranks from '../../data/ranks'
 
 
-function Nav () {
+function Nav (props) {
 
 
   return (
     <div>
       <h2>Nav</h2>
       <ul>
-        {ranks.kingdoms.map(rank => {
+        {Object.keys(ranks).map(rank => {
           return (
             <li key={rank.id}>
-              {rank.name}
+              <Link to={`/list/${rank}`}> {rank}</Link>
             </li>
           )
         })}
