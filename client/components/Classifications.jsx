@@ -10,7 +10,7 @@ function Classifications (props) {
   return (
     <div>
      {/* {console.log(findClass)} */}
-      <h1>{rank}</h1>
+      <h2>{rank}</h2>
       <ul>
         {classes.map(c => {
           return (

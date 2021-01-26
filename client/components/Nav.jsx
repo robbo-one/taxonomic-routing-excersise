@@ -13,7 +13,7 @@ function Nav () {
       {rankNames.map(rank => {
         return (
           <li key={rankNames.find(rankName => rankName == rank)}>
-            <Link to={`/list/${rank}`}>{rank}</Link>
+            <Link to={`/rank/${rank}`}>{rank}</Link>
           </li>
         )
       })}
