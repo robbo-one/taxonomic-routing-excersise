@@ -18,7 +18,7 @@ const Classifications = (props) => {
           return (
             // <Individual/>
             <li key={classification.id}>
-              <Link to={`/${rank}/${classification.id}`}>{classification.name}</Link>
+              <Link to={`/${rank}/${classification.name}`}>{classification.name}</Link>
             </li>
             
           );

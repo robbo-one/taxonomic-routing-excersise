@@ -13,7 +13,7 @@ function App () {
       <div className='main'>
           <Nav/>
           <Route path="/:rank" exact component={Classifications} />
-          <Route path="/:rank/:id" exact component={Individual} />
+          <Route path="/:rank/:name" exact component={Individual} />
           {/* <Route path="" exact component={Classifications} /> */}
         {/* <Home /> */}
         <Route path="/" exact component={Home} />
