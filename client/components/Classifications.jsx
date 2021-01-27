@@ -3,6 +3,7 @@ import ranks from '../../data/ranks'
 import { Link } from 'react-router-dom'
 
 function Classifications (props) {
+  // console.log(props)
 
   const rank = props.match.params.rank
   const classes = ranks[rank]

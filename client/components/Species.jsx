@@ -33,7 +33,7 @@ function Species (props) {
           Family: <Link to={`/rank/families/${findSpecies.family}`}>{findSpecies.family}</Link>
           </li>
         <li>
-          Genus: <Link to={`/rank/genera/${findSpecies.family}`}>{findSpecies.genus}</Link>
+          Genus: <Link to={`/rank/genera/${findSpecies.genus}`}>{findSpecies.genus}</Link>
           </li>
       </ul>
     </div>
