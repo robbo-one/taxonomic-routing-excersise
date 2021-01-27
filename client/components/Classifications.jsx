@@ -1,6 +1,8 @@
 import React from 'react'
 import ranks from '../../data/ranks'
 import { Link } from 'react-router-dom'
+import capitalise from '../utilities/capitalise'
+
 
 function Classifications (props) {
   // console.log(props)
@@ -11,7 +13,7 @@ function Classifications (props) {
   return (
     <div>
      {/* {console.log(findClass)} */}
-      <h2>{rank}</h2>
+      <h2>{capitalise(rank)}</h2>
       <ul>
         {classes.map(c => {
           return (
