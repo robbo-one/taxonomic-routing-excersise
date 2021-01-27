@@ -19,6 +19,11 @@ function Description(props) {
 	const name = props.match.params.name
 	const url = props.match.url
 
+
+	const filterSpecies  = species.filter(aSpecies => {
+		return aSpecies[rankSingle] == name
+	})
+
 	// console.log('speciesname', speciesName)
 
 	return (
@@ -40,13 +45,10 @@ function Description(props) {
 				})}
 			<h2>Species</h2>
 			<ul>
-				{species.filter(aSpecies => {
-					return aSpecies[rankSingle] == name
-				}).map(aSpecies => {
-
+				{filterSpecies.map(aSpecies => {
 					return (
 				<li>
-					<Link to={`${url}/species`}>{aSpecies.name}</Link>
+					<Link to={`${url}/species/${aSpecies.id}`}>{aSpecies.name}</Link>
 				</li>
 					)
 				})}
