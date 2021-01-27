@@ -14,7 +14,7 @@ const Classifications = (props) => {
       <h1>{rank}</h1>
       <ul>
           {names.map(item => {return(
-                <Link>
+                <Link to={`/rank/${rank}/${item.name}`}>
                   <li key={item.id}>
                     {item.name}
                   </li>

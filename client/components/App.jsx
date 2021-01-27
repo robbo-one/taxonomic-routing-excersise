@@ -3,6 +3,7 @@ import React from 'react'
 import Nav from './Nav'
 import Home from './Home'
 import Classifications from "./Classifications"
+import Classification from "./Classification"
 import { HashRouter as Router, Route } from 'react-router-dom'
 
 function App () {
@@ -15,6 +16,7 @@ function App () {
         <Nav />
         <Route path="/" exact component={Home} />
         <Route path="/list/:rank" exact component={Classifications} />
+        <Route path="/rank/:rank/:name" exact component={Classification} />
       </div>
     </Router>
       
