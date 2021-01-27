@@ -23,5 +23,4 @@ function Classifications (props) {
     </>
   )
 }
-
 export default Classifications
