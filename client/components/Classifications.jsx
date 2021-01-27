@@ -16,7 +16,7 @@ function Classifications (props) {
           ranks[data].map(rank => {
             return (
               <li>
-                <Link to={`/${data}/${rank.name}`}>{rank.name}</Link>
+                <Link to={`/rank/${data}/${rank.name}`}>{rank.name}</Link>
               </li>
               )
             })
