@@ -17,7 +17,7 @@ const SpeciesListing = (props) => {
     {species.map(val=> {
       
       if (Object.values(val).includes(name)){
-        return <li>{val.name}</li>
+        return <li><Link to={`/species/${val.id}`}>{val.name}</Link></li>
       }
   
   })}
