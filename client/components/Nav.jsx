@@ -12,7 +12,7 @@ function Nav () {
     {newData.map(rank => {
       return (
           <li key={rank}>
-            <Link to= {rank}>{rank}</Link>
+            <Link to= {`/${rank}`}>{rank}</Link>
           </li>
       )
     })}
