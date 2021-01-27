@@ -5,6 +5,7 @@ import { Route } from 'react-router-dom'
 import Nav from './Nav'
 import Home from './Home'
 import Classifications from './Classifications'
+import Info from './Info'
 
 function App () {
   return (
@@ -15,6 +16,7 @@ function App () {
         <Nav />
         <Route path="/" exact component={Home} />
         <Route path="/Ranks/:rank" exact component={Classifications} />
+        <Route path="/Ranks/:rank/:name" exact component={Info} />
       </div>
     </>
   )
