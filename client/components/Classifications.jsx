@@ -6,22 +6,22 @@ import ranks from "../../data/ranks";
 const Classifications = (props) => {
   const rank = props.match.params.rank
   const names = ranks[rank]
-  console.log(rank)
-  console.log(names)
-  
+  // console.log(rank)
+  // console.log(names)
+
   return(
     <div>
       <h1>{rank}</h1>
       <ul>
           {names.map(item => {return(
-                <Link to={`/rank/${rank}/${item.name}`}>
-                  <li key={item.id}>
+                <Link key={item.id} to={`/rank/${rank}/${item.name}`}>
+                  <li>
                     {item.name}
                   </li>
-                </Link>   
+                </Link>
               )
             }
-          )}   
+          )}
       </ul>
     </div>
   )
@@ -29,4 +29,3 @@ const Classifications = (props) => {
 
 
 export default Classifications
- 

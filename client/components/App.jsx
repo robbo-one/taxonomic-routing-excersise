@@ -19,7 +19,7 @@ function App () {
         <Route path="/rank/:rank/:name" exact component={Classification} />
       </div>
     </Router>
-      
+
     </>
   )
 }
