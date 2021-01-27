@@ -7,7 +7,6 @@ const Description = (props) => {
   const name = props.match.params.name
   const classification = props.match.params.rank
 
-
 let thing = ranks[classification].find(val => val.name == name)
 
   return (

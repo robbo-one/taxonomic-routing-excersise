@@ -12,10 +12,15 @@ const SpeciesListing = (props) => {
 
   return (
     <div>
+      <h1>Species</h1>
    <ul>
-    {species.map(val=> {if (val.kingdom == name) {
-    return (<li>{val.name}</li>)
-  }})}
+    {species.map(val=> {
+      
+      if (Object.values(val).includes(name)){
+        return <li>{val.name}</li>
+      }
+  
+  })}
 </ul>
     </div>
   )
