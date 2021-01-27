@@ -38,7 +38,7 @@ function SpeciesListing(props){
         {speciesList.map(spec => {
           return (
             <li key={spec.id}>
-              <Link to='#'>{spec.name}</Link>
+              <Link to={`/species/${spec.id}`}>{spec.name}</Link>
             </li>
           )
         })}  

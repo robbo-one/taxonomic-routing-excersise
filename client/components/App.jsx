@@ -6,6 +6,9 @@ import Home from './Home'
 import Classifications from './Classifications'
 import Description from './Description'
 import SpeciesListing from './SpeciesListing'
+import Species from './Species'
+
+
 
 function App () {
   return (
@@ -19,6 +22,7 @@ function App () {
           <Route path="/list/:rank" component={Classifications}/>
           <Route path="/rank/:rank/:name" component={Description}/>
           {/* <Route path="/rank/:rank/:name/species" component={SpeciesListing} /> */}
+          <Route path="/species/:id" component={Species}/>
 
         </div>
       </Router>
