@@ -9,7 +9,7 @@ const Nav = (props) => {
       <h2>Nav</h2>
       <ul>
         { ranks.map(rank => {
-          return <li> <Link to= { rank }>{rank}</Link></li>
+          return <li> <Link to={`/${ rank }`}>{rank}</Link></li>
         })}
       </ul>
     </div>
