@@ -1,5 +1,6 @@
 import React from 'react'
 import species from '../../data/species'
+import { Link } from 'react-router-dom'
 
 function SpeciesListing (props) {
 
@@ -39,7 +40,7 @@ function SpeciesListing (props) {
         {findAllSpecies.map(species => {
           return(
             <li key={species.id}>
-            {species.name}
+              <Link to={`/species/${species.id}`}>{species.name}</Link>
           </li>
           )
         })}
