@@ -5,7 +5,6 @@ import rankData from '../../data/ranks'
 const newData = Object.keys(rankData)
 
 function Nav () {
-  console.log(newData)
   return (
     <div>
     <h2>Nav</h2>
