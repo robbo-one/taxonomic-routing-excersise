@@ -1,14 +1,30 @@
 import React from 'react'
 import ranks from '../../data/ranks'
+import { Link } from 'react-router-dom'
+import species from '../../data/species'
 
 function Description(props) {
-	const data = props.match.params.ranks
+	const rank = props.match.params.ranks
+
+	const rankMap = {
+		kingdoms: 'kingdom',
+		phyla: 'phylum',
+		classes: 'class',
+		families: 'family',
+		genera: 'genus'
+	}
+
+	const rankSingle = rankMap[rank]
+
 	const name = props.match.params.name
+	const url = props.match.url
+
+	// console.log('speciesname', speciesName)
 
 	return (
 		<>
 			<div>
-				{ranks[data].map(text => {
+				{ranks[rank].map(text => {
 					if (text.name == name) {
 						return (
 							<>
@@ -22,6 +38,19 @@ function Description(props) {
 						)
 					}
 				})}
+			<h2>Species</h2>
+			<ul>
+				{species.filter(aSpecies => {
+					return aSpecies[rankSingle] == name
+				}).map(aSpecies => {
+
+					return (
+				<li>
+					<Link to={`${url}/species`}>{aSpecies.name}</Link>
+				</li>
+					)
+				})}
+			</ul>
 			</div>
 		</>
 	)
