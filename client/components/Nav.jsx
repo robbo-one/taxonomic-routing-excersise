@@ -1,11 +1,18 @@
 import React from 'react'
+import {Link} from 'react-router-dom'
+import ranks from '../../data/ranks'
 
-function Nav () {
+
+export function Nav () {
+  // const rankList = Object.keys(ranks)
   return (
     <div>
       <h2>Nav</h2>
       <ul>
-        <li>Build your ranks list here</li>
+        {Object.keys(ranks).map (rank => {
+          return (<li><Link to={`/${rank}`}>{rank}</Link>
+          </li>)
+        })}
       </ul>
     </div>
   )
